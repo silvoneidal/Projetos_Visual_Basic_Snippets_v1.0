@@ -1,10 +1,11 @@
 VERSION 5.00
 Begin VB.Form Form1 
+   BorderStyle     =   1  'Fixed Single
    Caption         =   "Form1"
    ClientHeight    =   11115
-   ClientLeft      =   165
-   ClientTop       =   510
-   ClientWidth     =   12060
+   ClientLeft      =   150
+   ClientTop       =   495
+   ClientWidth     =   12165
    BeginProperty Font 
       Name            =   "Consolas"
       Size            =   9.75
@@ -16,8 +17,9 @@ Begin VB.Form Form1
    EndProperty
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
+   MinButton       =   0   'False
    ScaleHeight     =   11115
-   ScaleWidth      =   12060
+   ScaleWidth      =   12165
    Begin VB.TextBox txtMensagem 
       Appearance      =   0  'Flat
       BackColor       =   &H00FFFFC0&
@@ -73,7 +75,7 @@ Begin VB.Form Form1
       ScrollBars      =   1  'Horizontal
       TabIndex        =   3
       Top             =   0
-      Width           =   8535
+      Width           =   8655
    End
    Begin VB.CommandButton cmdRemover 
       Caption         =   "Remover [x]"
@@ -84,7 +86,7 @@ Begin VB.Form Form1
       Width           =   4215
    End
    Begin VB.CommandButton cmdAdicionar 
-      Caption         =   "Adicionar [ ]"
+      Caption         =   "Adicionar [+]"
       Height          =   375
       Left            =   3600
       TabIndex        =   1
@@ -109,7 +111,7 @@ Private Sub Form_Load()
                       "Use (Ctrl+V) no local desejado."
    
    ' Largura inicial do formulário
-   Me.Width = 3650
+   Me.Width = 3600
    
    ' Carrega lista de snippets
    Call LoadSnippets
@@ -129,11 +131,11 @@ Private Sub txtSnippet_DblClick()
 End Sub
 
 Private Sub cmdSnippet_Click()
-   If Me.Width = 3650 Then
-      Me.Width = 12180
+   If Me.Width = 3600 Then
+      Me.Width = 12260
       cmdSnippet.Caption = "Snippet <-" ' open
    Else
-      Me.Width = 3650
+      Me.Width = 3600
       cmdSnippet.Caption = "Snippet ->" ' close
       txtSnippet.Text = Empty
    End If
