@@ -1,9 +1,13 @@
-condicao_ternaria
-piscaLed
-mediaAnalog
-debugPrint
 digitalWrite
 digitalRead
 Serial.print
 Serial.println
 namespace
+condicao_ternaria
+if_else
+if
+while
+mediaAnalog
+piscaLed
+debugPrint
+debugPrint_
