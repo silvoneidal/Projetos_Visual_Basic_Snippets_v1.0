@@ -115,6 +115,9 @@ Begin VB.Form Form1
             Caption         =   "White"
          End
       End
+      Begin VB.Menu mHelp 
+         Caption         =   "Help"
+      End
    End
 End
 Attribute VB_Name = "Form1"
@@ -187,6 +190,15 @@ Private Sub mSnippet_Click()
    End If
 
 End Sub
+
+Private Sub mHelp_Click()
+    Dim filePath As String
+    filePath = App.Path & "\help.html" ' Substitua pelo caminho do arquivo HTML desejado
+
+    ' Abre o arquivo HTML no navegador padrão
+    Shell "rundll32.exe url.dll,FileProtocolHandler " & filePath, vbNormalFocus
+End Sub
+
 
 'Private Sub txtSnippet_DblClick()
 '   Dim projectPath As String
